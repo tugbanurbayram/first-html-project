@@ -1,0 +1,384 @@
+*{  /* bu sayfadaki her şeye etki etsin */ 
+    box-sizing: border-box;  /*genişliğin ve yüksekliğin border ve padding eklendiğinde değişmesini engeller*/
+}
+/* key: margin, value : 0*/ 
+body{
+    margin: 0; /* soldan yapıştı */
+    padding: 0; /* üstten yapıştı */
+    background-color: #dbdbdb;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#social {
+    background-color: black;
+    color: white;
+    height: 55px;
+    width : 100%;
+    position: sticky; /* sabitlenmesi */ 
+    top: 0; /* yukarıya sabitlensin */
+    z-index: 1; /* sayfa üzerindeki herhangi bir şeyin üzerine çıkmasını engeller */
+    font-size: 18px;
+    text-align: right; /* yazılar sağa */
+    padding: 15px; /* iç boşluğu */
+
+}
+
+font {
+    float: left; /* sayfanın solundan gitsin */
+    letter-spacing: 2px; /* harfler arası boşluk */
+}
+
+span{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#social>i {
+    margin-right: 15px; /*sağdan dış boşluk */
+}
+
+#social>i:hover { /* fare ile üzerine gelindiğinde */
+    opacity: 0.8;  /* opaklığı */
+}
+
+#container {
+    width: 80%; /* sayfanın %80 ini kaplasın */
+    margin: auto; /* sol sağ boşlukları eşit ayarlansın */
+    height: auto; /* içeriğe göre otomatik ayarlar */
+   /* border: 1px solid red;  /* düz çizgi */
+
+}
+
+header {
+    width: 100%;  /* containerin tamamını kaplar */
+    height: 250px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15); /*gölge değerleri */
+    border-bottom-left-radius: 10px; /* ovalleştirildi */
+    border-bottom-right-radius: 10px;
+    position: relative;
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-size: 35px;
+    background-color: black; /*şeffaflaştırıldığında siyahlaşması için */
+    margin-bottom: 5px; /*alt kısımdan dış boşluk*/
+}
+
+#headerResim{
+    width: 100%;
+    height: 250px;
+    border-bottom-left-radius: 10px; /* ovalleştirildi */
+    border-bottom-right-radius: 10px;
+    opacity: 0.8;
+}
+ 
+#centered {
+    position: absolute; /* headere göre konumlanacak */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+}
+
+section{
+    width: 100%; /* containerin tamamını kaplasın */ 
+    height: auto; 
+    background-color: #f1f1f1;
+    border-top-left-radius: 10px; /* kenarları ovalleştir */ 
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15);
+    margin-top: 15px; /* header ve section arasındaki boşluk */
+    overflow: auto ; /* bulunduğu etiket içerisine sığdırıyo (navı section içerisine sığdırıyo) */ 
+}
+
+nav{
+    width: 20%; /*containerin %20si (içerisinde bulunduğu etiket) */
+    float: left; /* kendisinden sonraki içerik yanına gelsin altına değil*/
+    margin-top: 10px; /* üstten boşluk */
+    height: auto ;
+}
+
+nav ul{
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+nav li{
+    list-style-type: none;
+}
+
+nav li a{ /* linkler */
+    height: 50px;
+    line-height: 50px; /* satır yüksekliği */
+    text-decoration: none; /* altında bulunan çizgi olmasın */
+    color: black;
+    border-bottom: 1px solid #b4b4b4;/* altından her birine çerçeve */
+    padding-left: 20px;
+    display: block; /* linklerin alt alta gözükmesini sağlar . display varsayılan olarak inline değerini alır yani satır seviyesi elemanları*/
+
+}
+
+nav li a:hover { /*üzerine gelindiğinde */
+    color: white;
+    background-color: #adadad;
+
+}
+i{  /*iconlar */
+    margin-right: 5px;
+}
+
+main {
+    float: left;
+    height: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.icerik {
+    width: 47%;
+    height: auto;
+    display: inline-block; /*satırda ama block özelliklerini yansıtsın */
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    padding: 5px;
+    margin-bottom: 15; /* dış boşluk */
+
+}
+
+.rsm {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 0.8s; /* bu sürede alttaki değere ulaşır */
+}
+
+.rsm:hover{
+    opacity: 0.6;
+}
+
+h5 {
+    margin: 10px;
+    color : dimgray;
+}
+
+.icerikText {
+    margin: 10px;
+    color: dimgray;
+}
+
+.btnDevam:link{
+    display: block;
+    width: 150px;
+    height: 45px;
+    padding: 10px 20px;
+    background-color: #0071ce;
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 5px;
+
+}
+
+.btnDevam:hover{
+    opacity: 0.8;
+}
+
+footer {
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    color: white;
+    line-height: 75px;  /* dikeyde hizalama */
+    text-align: center; /* yatayda hizalama */
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+    line-height: 50px; /* dikeyde satırı ortaladı*/
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+}
+
+#hakkimizdaRSM {
+    width: 350px;
+    height: 300;
+    float: left; /* yazı yanına geldi */
+    border-radius: 10px;
+    margin: 25px;
+    margin-bottom: 10px;
+    transition: opacity 0.8 ;
+
+}
+
+#hakkimizdaRSM:hover {
+    opacity: 0.6;
+}
+
+.hakYazi {  
+    margin-right: 15px;
+    font-size: 15px;
+    font-family: Cambria;
+    text-indent: 40px;  /* satır başı yapmayı sağlıyor */
+    color: #494949;
+}
+
+.referans {
+    width: 31%;
+    height: 300px;
+    background-color: white;
+    float: left;
+    margin: 10px; /*4 bi yandan */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+}
+
+.refResim {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0;
+    opacity: 0.6;
+    transition: 0.8s;
+}
+
+.refResim:hover{
+    opacity: 1;
+}
+
+.refBaslik {
+    font-size: 20px;
+    display: inline-block; 
+    margin-top: 0px;
+    color: black;
+    text-align: center; /* baslık */
+    height: 45px;
+    line-height: 45px; /* ortalamak için */
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-top: -5px;
+}
+
+.refDetay {
+    text-align: center;
+}
+
+.galResim {
+    width: 22%;
+    height: 200px;
+    border-radius: 5px;
+    opacity: 0.8;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    margin: 10px;
+    transition: all 0.6s;
+    object-fit: cover;  /* resmin oranını korumayı sağlıyor sıkıştırmıyo*/
+
+}
+
+.galResim:hover {
+    opacity: 1;
+    border: 5px solid white;  /* solid: duz çizgi */ 
+    cursor: pointer; /* fare değişti */ 
+}
+
+.link:link { /* tıklanmamış hali link hali */
+    text-decoration: none;
+
+}
+
+iframe{
+    width: 98%;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, .15);
+    margin-left: 10px;
+}
+
+section1 {
+    width: 98%;
+    height: auto;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.form   {
+    width: 49%;
+    float: left;
+
+    height: 380px;
+    border: 1px solid #d8d8d8; /* çerçeve */
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.col25 {
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+
+}
+
+.col75 {
+    width: 75%;
+    float: left;
+    margin-top: 6px;
+    
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=text] , textarea{
+    width: 100% ;  /* col 75 in yuzde 100ü */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.row:after{  /* satırlardan sonra */
+    content: ""; /* içi boş div oluşturdu */
+    clear: both; 
+    display: block;
+
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+}
+
+.adres {
+    width: 49%;
+    float: left;
+    height: 380px;
+    border: 1px;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+.span1{
+    display: block;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-size: 16px;
+}
